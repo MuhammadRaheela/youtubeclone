@@ -5,9 +5,9 @@ import React from 'react'
 const Home = ({navigation}) => {
   return (
     <View>
-      <Text>HomeScreen</Text>
-      <Button  title='Go To Details' 
-      onPress={() => navigation.navigate('Details')}/>
+      <Text>Home screen</Text>
+      <Button  title='About' 
+      onPress={() => navigation.navigate('About')}/>
     </View>
   )
 }

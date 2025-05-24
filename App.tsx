@@ -1,107 +1,12 @@
-// import React, { useEffect, useState } from 'react';
-// import { View, Text,  StyleSheet, ActivityIndicator, ScrollView } from 'react-native';
-// import axios from 'axios';
-
-
-// const App = () => {
-//   const [posts, setPosts] = useState([]);
-//   const [loading, setLoading] = useState(true);
-
-//   useEffect(() => {
-//     axios.get('https://jsonplaceholder.typicode.com/posts')
-//       .then((response) => {
-//         setPosts(response.data);
-//         setLoading(false);
-//       })
-//       .catch((error) => {
-//         console.error('Error fetching posts:', error);
-//         setLoading(false);
-//       });
-//   }, []);
-
-//   if (loading) {
-//     return <ActivityIndicator size="large" style={styles.loading} />;
-//   }
-
-//   return (
-//    <ScrollView contentContainerStyle={styles.container}>
-//     <Text style={styles.title}>API DATA.......</Text>
-//     {
-//       posts.slice(0,10).map((item)=>(
-//       <View key={item.id} style={styles.post}>
-//         <Text style={styles.postTitle}>{item.title}</Text>
-//         <Text>{item.body}</Text>
-//       </View>
-
-//       ))}
-//    </ScrollView>
-//   );
-// };
-
-// const styles = StyleSheet.create({
-//   container: {
-//     padding:20,
-//      paddingTop: 50,
-//   },
-//   title: {
-//     fontSize: 24,
-//     fontWeight: 'bold',
-//     marginBottom: 20
-//   },
-//   post:{
-//     marginBottom: 15,
-//     padding:15,
-//     backgroundColor:"#f2f2f2",
-//     borderRadius: 8
-//   },
-//   postTitle:{
-//     fontSize: 16,
-//     fontWeight: 'bold'
-//   },
-//   loading:{
-//     flex: 1,
-//     justifyContent:"center"
-//   }
-// })
-
-// export default App;
-
-
-
-
-// import * as React from 'react';
-// import { createNativeStackNavigator } from '@react-navigation/native-stack';
-// import Home from './screen/Home';
-// import Deatils from './screen/Details';
-// import { NavigationContainer } from '@react-navigation/native';
-
-// const Stack = createNativeStackNavigator()
-
-// export default function App(){
-// return(
-// <NavigationContainer>
-//   <Stack.Navigator initialRouteName='Home'>
-//           <Stack.Screen name="Home" component={Home} />
-//     <Stack.Screen name="Details" component={Deatils} />
-//   </Stack.Navigator>
-// </NavigationContainer>
-
-//   )
-// }
-
-
 import React, { useState } from 'react';
 import { View, Image, Text, StyleSheet, ScrollView } from 'react-native';
 import YoutubeIframe from 'react-native-youtube-iframe'
 
-
 const App = () => {
-
   const [playing, setPlaying] = useState(false)
 
   return (
     <ScrollView>
-
 
       <View style={{ marginTop: 10 }}>
         <View style={styles.container}>
@@ -111,7 +16,6 @@ const App = () => {
           <Image resizeMode="contain" source={require('./assets/Ring.png')} style={styles.Ring} />
           <Image resizeMode='contain' source={require('./assets/search.png')} style={styles.search} />
         </View>
-
 
         <View style={styles.container}>
           <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} >
@@ -132,7 +36,6 @@ const App = () => {
           </ScrollView>
         </View>
 
-
         <View style={styles.container}>
           <Image resizeMode='contain' source={require('./assets/shortt.png')} style={styles.short} />
           <Text style={styles.textt}>Shorts</Text>
@@ -141,11 +44,9 @@ const App = () => {
           </View>
         </View>
 
-
         <View style={styles.container}>
           <Image resizeMode='contain' source={require('./assets/Front.jpg')} style={styles.front} />
         </View>
-
 
         <View>
           <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} >
@@ -159,8 +60,6 @@ const App = () => {
             <Image style={styles.Pictures} resizeMode='contain' source={require('./assets/image2.png')} />
           </ScrollView>
         </View>
-
-
 
         <View style={{ gap: 10 }}>
           <YoutubeIframe
@@ -276,13 +175,13 @@ const App = () => {
               source={require('./assets/youtubeicon4.png')}
               style={styles.videoicon}
             />
-            <Text style={{ marginLeft: 10,marginBottom:4, marginTop: 15 }}>
+            <Text style={{ marginLeft: 10, marginBottom: 4, marginTop: 15 }}>
 
-              Mark Zuckerberg: 50% Of Coding Will 
+              Mark Zuckerberg: 50% Of Coding Will
               {'\n'}
-              Be Done By AI 
-              
-               In 2026 | 
+              Be Done By AI
+
+              In 2026 |
               Satya Nadella Ag!
 
               {'\n'}
@@ -293,18 +192,34 @@ const App = () => {
             <Text style={{ fontSize: 20, fontWeight: 900, marginTop: 15, marginLeft: 15 }} >⋮</Text>
           </View>
 
-           <View>
-          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} >
-            <Image style={styles.Pictures} resizeMode='contain' source={require('./assets/image.png')} />
-            <Image style={styles.Pictures} resizeMode='contain' source={require('./assets/pic5.png')} />
-            <Image style={styles.Pictures} resizeMode='contain' source={require('./assets/pic6.png')} />
-            <Image style={styles.Pictures} resizeMode='contain' source={require('./assets/pic.png')} />
-            <Image style={styles.Pictures} resizeMode='contain' source={require('./assets/pic2.png')} />
-            <Image style={styles.Pictures} resizeMode='contain' source={require('./assets/pic3.png')} />
-            <Image style={styles.Pictures} resizeMode='contain' source={require('./assets/pic7.png')} />
-            <Image style={styles.Pictures} resizeMode='contain' source={require('./assets/image2.png')} />
-          </ScrollView>
-        </View>
+          <View>
+            <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} >
+              <Image style={styles.Pictures} resizeMode='contain' source={require('./assets/image.png')} />
+              <Image style={styles.Pictures} resizeMode='contain' source={require('./assets/pic5.png')} />
+              <Image style={styles.Pictures} resizeMode='contain' source={require('./assets/pic6.png')} />
+              <Image style={styles.Pictures} resizeMode='contain' source={require('./assets/pic.png')} />
+              <Image style={styles.Pictures} resizeMode='contain' source={require('./assets/pic2.png')} />
+              <Image style={styles.Pictures} resizeMode='contain' source={require('./assets/pic3.png')} />
+              <Image style={styles.Pictures} resizeMode='contain' source={require('./assets/pic7.png')} />
+              <Image style={styles.Pictures} resizeMode='contain' source={require('./assets/image2.png')} />
+
+            </ScrollView>
+            <View style={{ flexDirection: 'row', gap: 10, marginLeft: 12 }}>
+              <Image style={{ width: 60, height: 45 }} resizeMode='contain' source={require('./assets/footer1.png')} />
+              <Image style={{ width: 60, height: 30, marginTop: 5 }} resizeMode='contain' source={require('./assets/footer2.png')} />
+              <Image style={{ width: 60, height: 35, marginTop: 4 }} resizeMode='contain' source={require('./assets/footer4.webp')} />
+              <Image style={{ width: 60, height: 40 }} resizeMode='contain' source={require('./assets/foo.jpg')} />
+              <Image style={{ width: 60, height: 30, marginTop: 4 }} resizeMode='contain' source={require('./assets/footer3.png')} />
+            </View>
+            <View style={{ flexDirection: 'row', gap: 19, marginLeft: 19 }}>
+              <Text style={{ fontSize: 13 }}>Home</Text>
+              <Text style={{ fontSize: 13 }}>Subscribition</Text>
+              <Text style={{ fontSize: 13 }}>Explore</Text>
+              <Text style={{ fontSize: 13 }}>Shorts</Text>
+              <Text style={{ fontSize: 13 }}>Library</Text>
+            </View>
+
+          </View>
         </View>
       </View>
     </ScrollView>
@@ -321,6 +236,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     gap: '16px',
   },
+
+
 
   videoicon: {
     flexDirection: 'row',
@@ -389,8 +306,8 @@ const styles = StyleSheet.create({
     objectFit: 'cover'
   }
 
+
 })
 
 
 export default App;
-
